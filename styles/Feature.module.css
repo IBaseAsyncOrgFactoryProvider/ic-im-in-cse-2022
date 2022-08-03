@@ -1,40 +1,37 @@
 .container {
-    color: var(--color-primary-variant);
-    display: flex;
-    text-align: center;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3rem 0;
+  color: var(--color-primary-variant);
+  display: flex;
+  text-align: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 0;
 }
 
 .container.reversed {
-    flex-direction: row-reverse;
-}
-
-.container.reversed {
-    background-color: var(--color-surface-variant);
+  flex-direction: row-reverse;
+  background-color: var(--color-surface-variant);
 }
 
 .rotated {
-    writing-mode: sideways-lr;
+  writing-mode: sideways-lr;
 }
 
 .container h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .container h3:not(.rotated) {
-    text-orientation: upright;
-    writing-mode: vertical-rl;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
 }
 
 .container p {
-    max-width: 25rem;
-    font-size: .9rem;
+  max-width: 25rem;
+  font-size: 0.9rem;
 }
 
 .container img {
-    max-width: 100px;
+  max-width: 100px;
 }
