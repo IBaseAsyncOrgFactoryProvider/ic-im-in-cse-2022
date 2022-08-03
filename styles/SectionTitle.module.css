@@ -1,0 +1,22 @@
+.section-title {
+    color: var(--color-primary-variant);
+    position: relative;
+    font-size: 2.3rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    background-color: var(--color-heading-decoration);
+    height: 70%;
+    width: 3px;
+    left: -.75rem;
+    transform: rotateZ(20deg);
+    top: .75rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0 1rem;
+}

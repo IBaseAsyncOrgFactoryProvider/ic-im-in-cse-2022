@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "standard",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }]
+  }
 }
