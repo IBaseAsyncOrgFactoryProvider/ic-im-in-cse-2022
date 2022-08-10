@@ -80,10 +80,10 @@ export default function Schedule() {
                             </div>,
                             <div className={styles.columns} key={day.date + 'c'}>
                                 {
-                                    Object.entries(day.columns).map(([idx, column]) => (
+                                    day.columns.map((column, idx) => (
                                         <div className={styles.column} key={idx}>
                                         {
-                                            Object.entries(column).map(([idx, item]) => {
+                                            column.map((item, idx) => {
                                               if (item.placeholder) return <div className={styles.item} key={idx}></div>
                                               return (
                                                     <div className={styles.item} key={idx}>
