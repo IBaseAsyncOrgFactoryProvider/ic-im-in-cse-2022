@@ -15,7 +15,7 @@
 }
 
 .rotated {
-  writing-mode: sideways-lr;
+  transform: rotateZ(-90deg);
 }
 
 .container h3 {
