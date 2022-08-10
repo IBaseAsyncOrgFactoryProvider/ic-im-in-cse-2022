@@ -2,6 +2,7 @@
   color: var(--color-primary-variant);
   position: relative;
   font-size: 2.3rem;
+  margin-right: -1rem;
 }
 
 .section-title::before {
