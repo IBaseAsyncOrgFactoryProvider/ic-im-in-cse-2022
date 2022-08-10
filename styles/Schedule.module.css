@@ -8,7 +8,7 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', 'Noto Sans TC', sans-serif;
 }
 
 .surface h2 {

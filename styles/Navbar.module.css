@@ -13,7 +13,6 @@
   margin: auto;
   max-width: var(--large-container-width);
   padding: 16px;
-  font-family: serif;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;

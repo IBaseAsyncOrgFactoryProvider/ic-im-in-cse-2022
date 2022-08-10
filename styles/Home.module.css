@@ -24,7 +24,7 @@
   text-align: center;
   background-color: var(--color-hero-box-bg);
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
   margin: 32px 0;
   padding: 16px 96px;
   border-radius: 16px;
