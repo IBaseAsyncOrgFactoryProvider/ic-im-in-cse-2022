@@ -2,6 +2,12 @@
   padding: 0 2rem;
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 0;
+  }
+}
+
 .hero-container {
   text-align: center;
   display: grid;
@@ -15,7 +21,7 @@
 .hero-container img {
   max-width: 950px;
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 982 / 438;
   object-fit: cover;
 }
@@ -56,4 +62,56 @@
   border-radius: 100%;
   line-height: 1em;
   display: inline-block;
+}
+
+.hero .pipe {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .hero h1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero p {
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    width: 100%;
+  }
+
+  .hero p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .pipe {
+    display: block;
+  }
+
+  .hero .en-dash {
+    display: none;
+  }
 }

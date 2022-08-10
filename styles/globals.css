@@ -9,6 +9,10 @@
   --color-on-surface-variant: var(--color-primary-variant);
   --color-hero-box-bg: #1d2927c4;
   --color-hero-circle-bg: rgb(177 177 177 / 36%);
+  --color-schedule-day-selector-default-text: #eee;
+  --color-schedule-day-selector-default-bg: var(--color-primary);
+  --color-schedule-day-selector-active-text: var(--color-primary);
+  --color-schedule-day-selector-active-bg: var(--color-surface-text-emphasis);
   --container-width: 950px;
   --large-container-width: 1200px;
 }
@@ -17,10 +21,16 @@ html,
 body {
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
   font-family: 'Noto Sans TC', -apple-system, sans-serif;
   background-color: var(--color-page-bg);
   color: var(--color-primary);
-  font-size: 18px;
 }
 
 a {

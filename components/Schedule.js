@@ -54,7 +54,7 @@ export default function Schedule() {
     for (const column of day.columns) {
       if (column.length > maxRows) maxRows = column.length
     }
-  };
+  }
 
   for (const day of days) {
     for (const column of day.columns) {
@@ -65,11 +65,41 @@ export default function Schedule() {
         }
       }
     }
-  };
+  }
+
+  let daySelectorStyles = ''
+  for (const day of days) {
+    daySelectorStyles += `
+      #schedule-day-${day.date}-radio:checked ~ .${styles['day-selectors']} label[for="schedule-day-${day.date}-radio"] {
+        color: var(--color-schedule-day-selector-active-text);
+        background-color: var(--color-schedule-day-selector-active-bg);
+      }
+
+      #schedule-day-${day.date}-radio:checked ~ .${styles.grid} #schedule-day-${day.date} {
+        display: contents;
+      }
+    `
+  }
+
   return (
         <section className={styles.surface}>
+            <style dangerouslySetInnerHTML={{ __html: daySelectorStyles }}></style>
             <h2>行程</h2>
             <h3>September</h3>
+              {
+                days.map((day, idx) => (
+                  <input id={`schedule-day-${day.date}-radio`} type="radio" defaultChecked={idx === 0} className={styles.hide} name="schedule-day-selector" key={`schedule-day-${day.date}-radio`} />
+                ))
+              }
+            <div className={styles['day-selectors']}>
+              {
+                days.map(day => (
+                  <label htmlFor={`schedule-day-${day.date}-radio`} key={`schedule-day-${day.date}-radio`}>
+                    {day.date}th
+                  </label>
+                ))
+              }
+            </div>
             <div className={styles.grid} style={{ gridTemplateRows: `repeat(${maxRows + 1}, auto)` }}>
                 {
                     days.flatMap(day => {
@@ -78,13 +108,13 @@ export default function Schedule() {
                                 <div className={styles.date}><span className={styles.large}>{day.date}</span>th</div>
                                 <div className={styles.day}>{day.day}</div>
                             </div>,
-                            <div className={styles.columns} key={day.date + 'c'}>
+                            <div className={styles.columns} id={`schedule-day-${day.date}`} key={day.date + 'c'}>
                                 {
                                     day.columns.map((column, idx) => (
                                         <div className={styles.column} key={idx}>
                                         {
                                             column.map((item, idx) => {
-                                              if (item.placeholder) return <div className={styles.item} key={idx}></div>
+                                              if (item.placeholder) return <div className={`${styles.item} ${styles.placeholder}`} key={idx}></div>
                                               return (
                                                     <div className={styles.item} key={idx}>
                                                         <div className={styles.time}>{item.time}</div>

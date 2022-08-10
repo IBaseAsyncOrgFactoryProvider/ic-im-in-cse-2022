@@ -39,7 +39,7 @@ export default function Home() {
             <span>迎</span>
             <span>新</span>
           </div>
-          <p>2022 年 9 月 16 日 — <span style={{ whiteSpace: 'nowrap' }}>2022 年 9 月 18 日</span></p>
+          <p><span>2022 年 9 月 16 日</span><span className={styles['en-dash']}> — </span><span className={styles.pipe}>|</span><span style={{ whiteSpace: 'nowrap' }}>2022 年 9 月 18 日</span></p>
         </div>
       </div>
       <Story />
