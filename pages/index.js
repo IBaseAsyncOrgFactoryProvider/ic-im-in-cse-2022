@@ -12,9 +12,9 @@ function Features() {
   return (
     <>
       <SectionTitle title="活動介紹" />
-      <Feature name="大地遊戲" image={<img src="/flag.png" />} description="校園裡有八個神秘小關卡，學員們跟著小隊輔一起穿越到80年代闖關、收集卡帶，遊戲之中也能更了解元智校園哦！快來跟我們一起玩遊戲，在時空隧道裡奔跑吧！" reversed={true} />
+      <Feature name="大地遊戲" image={<img src="/flag.png" />} description="校園裡有八個神秘小關卡，學員們跟著小隊輔一起穿越到80年代闖關、收集卡帶，遊戲之中也能更了解元智校園哦！快來跟我們一起玩遊戲，在時空隧道裡奔跑吧！" withFilledBackground={true} />
       <Feature name="RPG" image={<img src="/game-console.png" />} description="一群大學生掉進去一個奇怪的世界，要逃離這個世界需要奪取傳說中的忘情水，通過層層關卡和挑戰才有機會拿到傳說中的水、杯子、白粉，接著找到阿霞，他會幫你調配忘情水（阿霞~~~給我一杯忘情水），必須藉由忘情水來打倒劉德華大魔王才能逃離這世界，究竟大學生們能不能逃離這裡？忘情水就藏在那邊了去尋找吧！" nameRotated={true} />
-      <Feature name="斯名牌" image={<img src="/training.png" />} description="男女朋友相處久了多多少少會因為意見不合而吵架甚至分手。我們這裡有幾位分手後還是很難走出心裡那個痛的朋友們，需要小隊員們透過資想爆爆你以及資援前線幫助他們治療心靈的創傷來度過這次的難關，你們能幫幫忙嗎！" reversed={true} />
+      <Feature name="斯名牌" image={<img src="/training.png" />} description="男女朋友相處久了多多少少會因為意見不合而吵架甚至分手。我們這裡有幾位分手後還是很難走出心裡那個痛的朋友們，需要小隊員們透過資想爆爆你以及資援前線幫助他們治療心靈的創傷來度過這次的難關，你們能幫幫忙嗎！" withFilledBackground={true} />
       <Feature name="賭場" image={<img src="/poker-chip.png" />} description={casinoDesc} />
     </>
   )

@@ -9,12 +9,8 @@
   padding: 3rem 0;
 }
 
-.outer-container.reversed {
+.outer-container.filled-bg {
   background-color: var(--color-surface-variant);
-}
-
-.reversed .container {
-  flex-direction: row-reverse;
 }
 
 .rotated {

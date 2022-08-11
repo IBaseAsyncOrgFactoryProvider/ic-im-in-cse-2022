@@ -1,10 +1,10 @@
 import styles from '../styles/Feature.module.css'
 
 export default function Feature({
-  name, description, image, reversed = false, nameRotated = false,
+  name, description, image, withFilledBackground = false, nameRotated = false,
 }) {
   let containerClasses = styles['outer-container']
-  if (reversed) containerClasses += ' ' + styles.reversed
+  if (withFilledBackground) containerClasses += ' ' + styles['filled-bg']
   return (
         <div className={containerClasses}>
           <div className={styles.container}>
