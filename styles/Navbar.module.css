@@ -65,5 +65,6 @@
 @media screen and (max-width: 800px), screen and (max-height: 500px) {
   .outer-container {
     position: initial;
+    box-shadow: none;
   }
 }
