@@ -15,6 +15,8 @@
 
 .rotated {
   transform: rotateZ(-90deg);
+  margin-left: 1rem;
+  margin-right: 1.75rem;
 }
 
 .container h3 {
@@ -29,8 +31,47 @@
 .container p {
   max-width: 25rem;
   font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .container img {
   max-width: 100px;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    justify-content: space-between;
+  }
+
+  .container img {
+    display: none;
+  }
+
+  .container p {
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .rotated {
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .container p {
+    padding: 0 16px;
+  }
+
+  .container h3 {
+    text-orientation: unset !important;
+    writing-mode: unset !important;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
 }
