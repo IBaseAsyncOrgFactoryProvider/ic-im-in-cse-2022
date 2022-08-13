@@ -14,6 +14,7 @@
   --color-schedule-day-selector-active-text: var(--color-primary);
   --color-schedule-day-selector-active-bg: var(--color-surface-text-emphasis);
   --container-width: 950px;
+  --narrow-container-width: 600px;
   --large-container-width: 1200px;
 }
 

@@ -1,0 +1,21 @@
+.surface {
+  background-color: var(--color-surface);
+  margin: 0 2rem;
+}
+
+.container {
+  min-height: 80vh;
+  max-width: var(--narrow-container-width);
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .surface {
+    margin: 0;
+  }
+}
