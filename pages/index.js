@@ -25,7 +25,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>主頁 | 資想見你</title>
-        <meta name="description" content="資想見你——2022 四資迎新" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className={styles['hero-container']}>
