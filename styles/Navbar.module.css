@@ -43,10 +43,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  .outer-container {
-    position: initial;
-  }
-
   .container {
     flex-direction: column;
     align-items: center;
@@ -63,5 +59,11 @@
     text-align: center;
     padding: 4px 0 6px;
     flex: 1;
+  }
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 500px) {
+  .outer-container {
+    position: initial;
   }
 }
