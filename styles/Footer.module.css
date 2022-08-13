@@ -1,0 +1,31 @@
+.outer-container {
+  background-color: rgb(0 0 0 / 10%);
+  padding: 2rem 0 4rem;
+}
+
+.container {
+  max-width: var(--large-container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container h2 {
+  font-size: 1.2rem;
+}
+
+.container img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+.container a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container a:hover,
+.container a:active {
+  opacity: 0.7;
+}
