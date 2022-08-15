@@ -15,27 +15,19 @@
   text-align: center;
 }
 
-.email-suffix {
-  background: rgb(0 0 0 / 15%);
-  border: 2px solid var(--color-primary);
-  border-left: 0;
-  display: flex;
-  align-items: center;
-  padding: 0.3rem;
+.container p {
+  font-size: 0.8rem;
+  line-height: 1.7;
 }
 
-.container details {
-  margin: 1rem 0;
-  font-size: 0.9rem;
+.container code {
+  background: rgb(0 0 0 / 5%);
+  border: 1px solid var(--color-primary);
+  padding: 4px;
 }
 
-.container details[open] {
-  border: 2px solid var(--color-primary);
-  padding: 1rem 1rem 0;
-}
-
-.container summary:hover * {
-  background: var(--color-surface-variant);
+.container a {
+  text-decoration: underline;
 }
 
 .error {

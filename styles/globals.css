@@ -13,6 +13,7 @@
   --color-schedule-day-selector-default-bg: var(--color-primary);
   --color-schedule-day-selector-active-text: var(--color-primary);
   --color-schedule-day-selector-active-bg: var(--color-surface-text-emphasis);
+  --color-error: #6a1108;
   --container-width: 950px;
   --narrow-container-width: 600px;
   --large-container-width: 1200px;
@@ -41,4 +42,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+  display: none !important;
 }
