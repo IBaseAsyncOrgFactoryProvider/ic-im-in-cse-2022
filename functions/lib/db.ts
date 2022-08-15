@@ -7,6 +7,8 @@ import {
   AuthAuditLogs,
   AuthCode,
   PresentVerificationCodeAuthAuditLog,
+  DBSignupInfo,
+  Signup,
 } from './types';
 
 export class DB {
@@ -222,6 +224,75 @@ export class DB {
 
     if (!res.ok) {
       throw new Error(`firebase: status code is ${res.status}`);
+    }
+  }
+
+  async insertSignupForTarget(request: Request, target: UserEmail, info: DBSignupInfo) {
+    let urlObj = new URL(this.baseUrl);
+    urlObj.pathname = `/signups.json`;
+    let url = urlObj.toString();
+
+    let toWrite: Signup = {
+      cancelationTime: null,
+      owner: target,
+      info,
+      ...this.makeBaseAuthAuditLog(request),
+    }
+
+    let { headers } = await this.getRequestHeaders();
+
+    let res = await fetch(url, {
+      headers,
+      method: 'POST',
+      body: JSON.stringify(toWrite),
+    });
+
+    if (!res.ok) {
+      throw new Error(`firebase: status code is ${res.status}`);
+    }
+  }
+
+  async getSignupsForTarget(target: UserEmail) {
+    let urlObj = new URL(this.baseUrl);
+    urlObj.pathname = '/signups.json';
+    urlObj.searchParams.set('orderBy', '"owner"');
+    urlObj.searchParams.set('equalTo', `"${target}"`);
+    let url = urlObj.toString();
+
+    let { headers } = await this.getRequestHeaders();
+    let res = await fetch(url, {
+      headers,
+    });
+
+    if (!res.ok) {
+      throw new Error(`firebase: status code is ${res.status}`);
+    }
+
+    let raw: Record<string, Signup> = await res.json();
+    return raw
+  }
+
+  async cancelSignupsForTarget(target: UserEmail) {
+    let signups = await this.getSignupsForTarget(target);
+    for (let key in signups) {
+      let urlObj = new URL(this.baseUrl);
+      urlObj.pathname = `/signups/${key}.json`;
+      let url = urlObj.toString();
+
+      let { headers } = await this.getRequestHeaders();
+
+      let delta: Partial<Signup> = {
+        cancelationTime: Date.now(),
+      }
+      let { ok, status } = await fetch(url, {
+        headers,
+        method: 'PATCH',
+        body: JSON.stringify(delta),
+      });
+
+      if (!ok) {
+        throw new Error(`firebase: status code is ${status}`);
+      }
     }
   }
 }

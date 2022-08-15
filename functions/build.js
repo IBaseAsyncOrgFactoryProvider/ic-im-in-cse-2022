@@ -16,4 +16,5 @@ esbuild.build({
   splitting: true,
   minify: true,
   charset: 'utf8',
+  mainFields: ['module'],
 })

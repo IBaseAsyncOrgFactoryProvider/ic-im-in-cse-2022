@@ -8,8 +8,10 @@
   },
   "private": true,
   "dependencies": {
+    "@js-temporal/polyfill": "^0.4.2",
     "@tsndr/cloudflare-worker-jwt": "^2.0.1",
     "cookie": "^0.5.0",
+    "libphonenumber-js": "^1.10.12",
     "zod": "^3.18.0"
   },
   "devDependencies": {
