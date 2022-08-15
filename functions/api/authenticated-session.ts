@@ -7,7 +7,7 @@ import jwt from '@tsndr/cloudflare-worker-jwt';
 
 const AuthenticateRequest = z.object({
   email: ZodUserEmail,
-  code: z.string().trim().length(6),
+  code: z.string().trim().min(1),
 });
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -18,6 +18,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   } catch (e) {
     console.error(e);
     return makeErrorResponse(`cannot_parse_request`, 400, e);
+  }
+
+  if (req.code.length !== 6) {
+    return makeErrorResponse(`code_failed`, 401);
   }
 
   let db = new DB(
