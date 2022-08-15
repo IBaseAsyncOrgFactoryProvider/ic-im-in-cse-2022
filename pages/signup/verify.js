@@ -102,7 +102,7 @@ export default function SignupVerifyPage() {
         <h1>報名</h1>
         <p>報名前，請先使用學校信箱驗證身份。</p>
         <br />
-        <div className={formStyles['form-item']}>
+        <div className={formStyles['form-item']} style={{ display: 'inline-flex' }}>
           <label htmlFor="email-local-part">你的學校信箱</label>
           <div style={{ display: 'flex' }}>
             <input

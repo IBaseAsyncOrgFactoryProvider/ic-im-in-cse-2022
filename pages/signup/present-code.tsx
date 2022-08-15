@@ -4,6 +4,7 @@ import styles from '../../styles/PresentCodePage.module.css'
 import formStyles from '../../styles/Form.module.css'
 import Link from 'next/link'
 import * as api from '../../api'
+import Head from 'next/head'
 
 export default function PresentCodePage() {
   const router = useRouter()
@@ -69,9 +70,12 @@ export default function PresentCodePage() {
 
   return (
     <div className={styles.surface}>
+      <Head>
+        <title>驗證 | 資想見你</title>
+      </Head>
       <form className={styles.container} onSubmit={handleSubmit}>
         <h1>輸入驗證碼</h1>
-        <div className={formStyles['form-item']}>
+        <div className={formStyles['form-item']} style={{ display: 'inline-flex' }}>
           <label htmlFor="code-input">驗證碼</label>
           <br />
           <input

@@ -1,0 +1,27 @@
+.dataRow {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.dataRow .title {
+  min-width: 10rem;
+  font-weight: bold;
+  padding-right: 1rem;
+  text-align: right;
+}
+
+.info h3 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .dataRow {
+    flex-wrap: wrap;
+    padding-bottom: 0.3rem;
+  }
+
+  .dataRow .title {
+    width: 100%;
+    text-align: left;
+  }
+}

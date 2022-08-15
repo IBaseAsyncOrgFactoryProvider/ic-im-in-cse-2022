@@ -1,0 +1,93 @@
+.surface {
+  background-color: var(--color-surface-variant);
+  margin: 0 2rem;
+}
+
+.container {
+  min-height: 80vh;
+  max-width: var(--narrow-container-width);
+  margin: auto;
+  padding: 3rem;
+  line-height: 1.7;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container code {
+  background: rgb(0 0 0 / 5%);
+  border: 1px solid var(--color-primary);
+  padding: 4px;
+}
+
+.container a {
+  text-decoration: underline;
+}
+
+.container h2 {
+  font-size: 1.2rem;
+}
+
+.container h3 {
+  font-size: 1rem;
+}
+
+.container table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.container table tr {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.container table td {
+  padding: 4px;
+}
+
+.container table tr:first-child,
+.container table td:first-child {
+  font-weight: bold;
+}
+
+.error {
+  color: var(--color-error);
+  margin-bottom: 1rem;
+}
+
+.error-list {
+  background: rgb(255 225 225 / 30%);
+  border: 1px solid #6f0000;
+  padding: 0.5rem 1rem;
+}
+
+.identity {
+  font-size: 0.8rem;
+}
+
+.container img {
+  width: 40%;
+  min-width: 180px;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .surface {
+    margin: 0;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .container img {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    padding: 1rem;
+  }
+}
