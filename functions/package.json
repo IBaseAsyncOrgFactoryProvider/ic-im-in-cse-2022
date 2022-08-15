@@ -1,0 +1,21 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && node build.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@tsndr/cloudflare-worker-jwt": "^2.0.1",
+    "cookie": "^0.5.0",
+    "zod": "^3.18.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@types/cookie": "^0.5.1",
+    "esbuild": "^0.15.2",
+    "glob": "^8.0.3"
+  }
+}
