@@ -12,13 +12,18 @@
   width: 100%;
   margin: auto;
   max-width: var(--large-container-width);
-  padding: 16px;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   --color-default: #cacaca;
   --color-active: #000;
+}
+
+.container img {
+  height: 100px;
+  padding: 16px 16px 12px;
 }
 
 .links {
@@ -26,6 +31,7 @@
   border-left-width: 0;
   border-right-width: 0;
   color: var(--color-default);
+  margin: 16px;
 }
 
 .links a {
@@ -46,13 +52,13 @@
   .container {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
     font-size: 1rem;
   }
 
   .links {
     display: flex;
     width: 100%;
+    margin-top: 0;
   }
 
   .links a {
