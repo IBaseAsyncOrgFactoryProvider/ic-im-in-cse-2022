@@ -25,7 +25,9 @@ export default function Navbar() {
                   <ActiveLink activeClassName={styles.active} href="/signup" matchPrefix={true}>
                     <a>報名</a>
                   </ActiveLink>
-                    <a href="#">活動照片</a>
+                  <ActiveLink activeClassName={styles.active} href="/photos">
+                    <a>活動回顧</a>
+                  </ActiveLink>
                 </div>
             </div>
         </div>

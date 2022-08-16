@@ -1,0 +1,48 @@
+.hero-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  height: 500px;
+  place-items: center;
+}
+
+.hero-container img {
+  max-width: 950px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  text-align: center;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 10%,
+      var(--color-surface-variant) 10%,
+      var(--color-surface-variant) 100%
+    );
+  color: var(--color-primary-variant);
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  margin: 32px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2rem !important;
+}
+
+.hero h2::before {
+  background-color: #fff !important;
+}
+
+.hero,
+.hero-container img {
+  grid-area: 1 / 1 / 1 / 1;
+}
