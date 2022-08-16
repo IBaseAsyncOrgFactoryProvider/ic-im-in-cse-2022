@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Schedule from '../components/Schedule'
 import Feature from '../components/Feature'
 import SectionTitle from '../components/SectionTitle'
+import EventingEventSchedule from '../components/EveningEventSchedule'
 import Story from '../components/Story'
 import formStyles from '../styles/Form.module.css'
 import featureStyles from '../styles/Feature.module.css'
@@ -64,7 +65,7 @@ function Features() {
           description={
             <>
               各位也不要錯過晚會串場的有趣故事歐！
-              <br />在 8、90
+              <br /><br />在 8、90
               年代的某一天，出現了一名不速之客涉嫌綁架案，他的行動阻擾所有人回到現代的機會。動靜之大事態嚴重，迫使奇異果博士走訪台灣調查並追捕真凶。究竟犯人目的為何？人質能平安無事嗎？整起事件的幕後黑手究竟是誰？
             </>
           }
@@ -103,6 +104,7 @@ export default function Home() {
       <Story />
       <Schedule />
       <Features />
+      <EventingEventSchedule />
       <div style={{ textAlign: 'center', padding: '3rem 0' }}>
         <Link href="/signup">
           <button className={formStyles['form-button']}>立即報名</button>
