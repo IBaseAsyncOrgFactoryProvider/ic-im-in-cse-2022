@@ -4,7 +4,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   align-items: center;
-  height: 500px;
   place-items: center;
 }
 
