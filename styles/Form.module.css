@@ -50,6 +50,7 @@
   background: transparent;
   padding: 0.5rem;
   border: 2px solid var(--color-primary);
+  border-radius: 0;
   padding-right: 0.3rem;
 }
 
