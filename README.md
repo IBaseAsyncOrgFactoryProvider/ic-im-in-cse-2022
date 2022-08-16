@@ -1,3 +1,45 @@
+
+## 怎麼 build
+這樣一坨麵條格式又亂，ESLint 跟 Prettier 還會打架的 repo，到底是哪個沒水準的寫的～～
+
+我只測過 Node.js 18 / macOS 12 這個環境，npm script 我用了 rm、cp、mv，用 Windows 的人要自己修
+
+1. 請你先在 functions/ 底下跑 `npm install`
+2. 回到 repo 頂層，下 `npm install`
+3. 下 `npm run export`
+4. 這時候你要把 out/ 搬到 repo 外面，遠離 node_modules，不然當你要用 wrangler publish 的時候，它會很想分析你的 node_modules（明明我就幫你 bundle 好了！），會炸掉
+
+Firebase Realtime Database 要記得加上 `.indexOn` 的規則：
+```json
+{
+  "rules": {
+    "authAuditLogs": {
+      ".indexOn": ["target"]
+    },
+    "signups": {
+      ".indexOn": ["owner"]
+    }
+  }
+}
+```
+
+## Environment variables
+```ts
+export type Env = {
+  GRECAPTCHA_SECRET: string
+
+  // 你可以看程式碼寫一個 API 一樣的服務:)
+  SMTP_BRIDGE_TOKEN: string
+  MAIL_FROM: string
+  FIREBASE_RTDB_URL: string
+
+  // 這是 json
+  FIREBASE_SERVICE_ACCOUNT_CREDENTIALS: string
+  JWT_SECRET: string
+}
+```
+
+## -
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
