@@ -64,6 +64,7 @@ export default function SignupVerifyPage() {
         window.localStorage.setItem('lastAuthAttempt', Date.now())
         window.localStorage.setItem('lastAuthAttemptEmail', email)
         router.replace('/signup/present-code')
+        return
       }
     } catch (e) {
       console.error(e)
