@@ -84,6 +84,7 @@ export default function PresentCodePage() {
             inputMode="numeric"
             autoComplete="off"
             required
+            autoFocus
             className={formStyles['w-8']}
             value={code}
             onInput={(e) => {
