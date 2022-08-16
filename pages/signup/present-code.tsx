@@ -77,7 +77,6 @@ export default function PresentCodePage() {
         <h1>輸入驗證碼</h1>
         <div className={formStyles['form-item']} style={{ display: 'inline-flex' }}>
           <label htmlFor="code-input">驗證碼</label>
-          <br />
           <input
             id="code-input"
             type="text"
