@@ -275,6 +275,8 @@ export class DB {
   async cancelSignupsForTarget(target: UserEmail) {
     let signups = await this.getSignupsForTarget(target);
     for (let key in signups) {
+      if (signups[key].cancelationTime) continue;
+
       let urlObj = new URL(this.baseUrl);
       urlObj.pathname = `/signups/${key}.json`;
       let url = urlObj.toString();
