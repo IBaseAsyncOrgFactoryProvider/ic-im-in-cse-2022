@@ -139,6 +139,7 @@ export default function SignupVerifyPage() {
         >
           繼續
         </button>
+        <p style={{ fontSize: '0.9rem' }}>報名只開放到 8/28 中午 12:00，請把握時間！</p>
       </form>
     </div>
   )
