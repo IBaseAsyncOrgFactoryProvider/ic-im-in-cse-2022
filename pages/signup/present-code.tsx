@@ -94,6 +94,8 @@ export default function PresentCodePage() {
         <p>
           我們已寄送一封含有六位數驗證碼的電子郵件到 <code>{email}</code>。
           <br />
+          現在就到 Outlook 收信吧！
+          <br />
           如果一直沒有收到驗證信，請檢查是否被歸類為垃圾郵件。
         </p>
         {errorMessage && <div className={styles.error}>{errorMessage}</div>}
