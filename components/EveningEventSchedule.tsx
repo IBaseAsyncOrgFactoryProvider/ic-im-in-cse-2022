@@ -39,8 +39,8 @@ const eveningEventSchedule = [
   ],
   [
     { type: 'extra', label: '串場 - 第五場' },
-    { type: 'main', label: '偷偷' },
     { type: 'main', label: '我要你愛' },
+    { type: 'main', label: '偷偷' },
     { type: 'extra', label: '主持 - 有獎徵答' },
     { type: 'extra', label: '暗線 - 第二場' },
     { type: 'main', label: '關閉太陽' },
