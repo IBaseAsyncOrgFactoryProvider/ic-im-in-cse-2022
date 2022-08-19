@@ -5,6 +5,7 @@ export default function Feature({
   description,
   image,
   nameRotated = false,
+  showImageInMobileLayout = false,
 }) {
   return (
     <>
@@ -12,7 +13,10 @@ export default function Feature({
         <h3 className={nameRotated ? styles.rotated : null}>{name}</h3>
       </div>
       <div className={styles.description}>
-        <p>{description}</p>
+        <p>
+          { showImageInMobileLayout && <span className={styles['mobile-layout-only']}>{image}<br /></span> }
+          {description}
+        </p>
       </div>
       <div className={styles.image}>{image}</div>
     </>

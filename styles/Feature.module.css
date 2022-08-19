@@ -67,6 +67,10 @@
   background-color: var(--color-surface-variant);
 }
 
+.mobile-layout-only {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr 3fr;
@@ -83,6 +87,10 @@
 
   .grid p {
     padding-right: 16px;
+  }
+
+  .mobile-layout-only {
+    display: unset;
   }
 }
 
