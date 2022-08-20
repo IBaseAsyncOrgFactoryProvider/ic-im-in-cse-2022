@@ -40,7 +40,7 @@ export default function Schedule() {
         [
           { time: '07:50–08:20', title: '早操' },
           { time: '08:20–09:00', title: '早餐' },
-          { time: '09:00–12:00', title: '斯名牌' },
+          { time: '09:00–12:00', title: '撕名牌' },
           { time: '12:00–13:00', title: '午餐' },
           { time: '13:00–17:00', title: '賭場' },
           { time: '17:00–18:30', title: '結業典禮' },
