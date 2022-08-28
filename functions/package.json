@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist/ && node build.js"
+    "build": "rm -rf dist/ && mkdir dist && node build.js"
   },
   "private": true,
   "dependencies": {
