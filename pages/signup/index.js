@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import SignupReminders from '../../components/SignupReminders'
 import styles from '../../styles/SignupPage.module.css'
 
 export default function SignupPage() {
@@ -10,7 +11,19 @@ export default function SignupPage() {
       <div className={styles.surface}>
         <div className={styles.container}>
           <h1>報名</h1>
-          <div style={{ textAlign: 'center' }}>報名已經截止囉！有問題請私訊我們的 IG 帳號！</div>
+          <p>
+            報名已經截止囉！有任何問題都歡迎私訊我們的{' '}
+            <a
+              href="https://www.instagram.com/yzu_ic.im.in.cse_2022"
+              target="_blank"
+              rel="noreferrer"
+            >
+              IG 帳號
+            </a>
+            ！
+          </p>
+          以下幾點再次提醒～
+          <SignupReminders />
         </div>
       </div>
     </>
