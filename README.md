@@ -1,9 +1,5 @@
 
 ## 怎麼 build
-這樣一坨麵條格式又亂，ESLint 跟 Prettier 還會打架的 repo，到底是哪個沒水準的寫的～～
-
-我只測過 Node.js 18 / macOS 12 這個環境，npm script 我用了 rm、cp、mv，用 Windows 的人要自己修
-
 1. 請你先在 functions/ 底下跑 `npm install`
 2. 回到 repo 頂層，下 `npm install`
 3. 下 `npm run export`
